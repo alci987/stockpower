@@ -1,3 +1,4 @@
 Este arquivo foi alterado no site
 
-Essa alteração aqui eu fiz localmente para testar conflito
+Essa alteração aqui eu fiz localmente para testar conflito e já foi feito e resolvido o conflito de teste
+
