@@ -1,0 +1,106 @@
+
+<ul class="list-unstyled components">
+    <?php if(isset($_SESSION['admin'])){ ?>
+    
+    <li>
+        <a href="<?=$project_index;?>">
+            <i class="fa fa-desktop"></i>
+            Painel Admin
+        </a>
+    </li>
+
+    <li class="active">
+        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fa fa-shopping-cart"></i>
+            Produtos
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu1">
+            <li>
+                <a href="?option=list_products">Listar Produtos</a>
+            </li>
+            
+            <li>
+                <a href="?option=add_product">Adicionar Produto</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="active">
+        <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fa fa-users"></i>
+            Funcionários
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu2">
+            <li>
+                <a href="#">Listar Funcionários</a>
+            </li>
+            
+            <li>
+                <a href="#">Adicionar Funcionário</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="active">
+        <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fa fa-truck"></i>
+            Fornecedores
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu3">
+            <li>
+                <a href="?option=list_manager">Listar Fornecedores</a>
+            </li>
+            
+            <li>
+                <a href="?option=add_manager">Adicionar Fornecedor</a>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#">
+            <i class="fa fa-file-pdf-o"></i>
+            Relatórios
+        </a>
+    </li>
+
+    <?php }elseif(isset($_SESSION['func'])){ ?>
+        
+        <li>
+            <a href="<?=$project_index;?>">
+                <i class="fa fa-desktop"></i>
+                Painel Func.
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-shopping-cart"></i>
+                Produtos
+            </a>
+            <ul class="collapse list-unstyled" id="homeSubmenu1">
+                <li>
+                    <a href="?option=list_products">Listar Produtos</a>
+                </li>
+                
+                <li>
+                    <a href="?option=add_product">Adicionar Produto</a>
+                </li>
+            </ul>
+        </li>    
+
+        <li>
+            <a href="#">
+                <i class="fa fa-file-pdf-o"></i>
+                Relatórios
+            </a>
+        </li>
+
+    <?php } ?>
+    <li>
+        <a href="logout.php">
+            <i class="fa fa-power-off"></i>
+            Sair
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+<h2 class="text-center" style="color: #6d7fcc;"><i class="fa fa-plus-square"></i> Cadastro de Fornecedores</h2>
+<form action="<?=$GLOBALS['project_index'];?>/add_manager.php" method="POST">
+	<label for="">Nome do Fornecedor: </label><br>
+	<input type="text" placeholder="Nome do Fornecedor" required class="form-control" name="manager_name"><br><br>
+
+	<label for="">Contato: </label><br>
+	<input type="text" id="phone" placeholder="Contato" required class="form-control" name="manager_contact"><br><br>
+
+	<label for="">Email: </label><br>
+	<input type="email" placeholder="Email" required class="form-control" name="manager_email"><br><br>
+
+	<label for="">Cnpj: </label><br>
+	<input type="text" id="cnpj"  placeholder="cnpj" required class="form-control" name="manager_cnpj"><br><br>
+
+	<label for="">Data de Cadastro: </label><br>
+	<input type="text" placeholder="Validade" required class="form-control" name="manager_created_in"><br><br>
+
+	<button class="btn btn-success">
+		<i class="fa fa-plus-square"></i>
+		Inserir Forncedor
+	</button>
+</form>

@@ -1,0 +1,61 @@
+<?php
+	
+	# Recuperando os dados do arquivo
+	$products = file("products.txt");
+
+?>
+
+	<h2 class="text-center" style="color: #6d7fcc;"><i class="fa fa-plus-square"></i> Lista de Produtos</h2>
+
+	
+    <div class="row page-titles">
+        
+        <div class="col-md-12 col-4 align-self-end">
+            
+            <a href="?option=add_product" class="btn float-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Novo Produto</a>                        
+        </div>
+    </div>
+    <div class="card">
+                            <div class="card-body">
+    <h6 class="card-subtitle">Gerar Relatório (Escolha uma das opções:)</h6>
+<div class="table-responsive m-t-40">
+	<table id="myTable" class=" table table-hover table-striped table-bordered">
+		<thead>
+			<th>Produto</th>
+			<th>Descrição</th>
+			<th>Categoria</th>
+			<th>Preço</th>
+			<th>Data Vencimento</th>
+			<td>Ações</td>
+			
+		</thead>
+		<tbody>
+		<?php			
+			
+			foreach ($products as $k => $product) {
+				
+				#Transformando a string em array
+				$product = explode(" - ",$product);
+				echo "<tr>";
+				foreach ($product as $value) {				
+					echo '<td>'.$value.'</td>';
+				}
+				echo '<td>
+				<a href="delete_product.php?filter='.$k.'" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+				</a>
+				</td>';
+				echo '</tr>';
+			}
+			
+		?>
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+
+<?php 
+	$nome = "alci";
+	$$nome = "Silva";
+	echo $nome;
+ ?>
